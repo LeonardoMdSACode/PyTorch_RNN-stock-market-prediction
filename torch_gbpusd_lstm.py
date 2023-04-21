@@ -42,7 +42,6 @@ print(df.describe())
 
 print(df.isnull().sum())
 
-df_ibm=df.fillna(method='ffill')
 scaler = MinMaxScaler(feature_range=(-1, 1))
 df['Close'] = scaler.fit_transform(df['Close'].values.reshape(-1,1))
 
